@@ -1,55 +1,17 @@
-canvas = document.getElementById("myCanvas");
-ctx= canvas.getContext("2d");
+name_student_array=[];
+function submit()
+{
+    var name_1=document.getElementById("nameof_student1").value;
 
-/*
-    Use beginPath() function to begin a path.
-    Then, use strokeStyle to set the color to "grey".
-    Use lineWidth and set the width to 1.
-    Use rect() to create a rectangle at 150 and 143
-with 430 width and 200 height.
-*/
+    var name_2 =document.getElementById("nameof_student2").value;
 
-ctx.beginPath();
-ctx.strokeStyle = "grey";
-ctx.lineWidth = 1;
-ctx.rect(150, 143, 430, 200);
-ctx.stroke();
+    var name_3 =document.getElementById("nameof_student3").value;
 
-/*
-    Use beginPath() function to begin a path.
-    Then, use strokeStyle to set the color to "blue".
-    Use lineWidth and set the width to 5.
-    Use arc() to create a circle at x = 150 and y = 143
-with 40 as radius, 0 startAngle and 2 * Math.PI endAngle.
-*/
-
-ctx.beginPath();
-ctx.strokeStyle = "blue";
-ctx.lineWidth = 5;
-ctx.arc(250, 210, 40, 0, 2 * Math.PI);
-ctx.stroke();
-
-// Similarly, create a black circle with position 350 and 210
-ctx.beginPath();
-ctx.strokeStyle = "black";
-ctx.lineWidth = 5;
-ctx.arc(350, 210, 40, 0, 2 * Math.PI);
-ctx.stroke();
-// Similarly, create a red circle with position 210 and 40
-ctx.beginPath();
-ctx.strokeStyle = "red";
-ctx.lineWidth = 5;
-ctx.arc(450, 210, 40, 0, 2 * Math.PI);
-ctx.stroke();
-// Similarly, create an orange circle with position 300 and 250
-ctx.beginPath();
-ctx.strokeStyle = "orange";
-ctx.lineWidth = 5;
-ctx.arc(300, 250, 40, 0, 2 * Math.PI);
-ctx.stroke();
-// Similarly, create a green circle with position 400 and 250
-ctx.beginPath();
-ctx.strokeStyle = "green";
-ctx.lineWidth = 5;
-ctx.arc(400, 250, 40, 0, 2 * Math.PI);
-ctx.stroke();
+    var name_4=document.getElementById("nameof_student4").value;
+    name_student_array.push(name_1);
+    name_student_array.push(name_2);
+    name_student_array.push(name_3);
+    name_student_array.push(name_4);
+    console.log(name_student_array);
+    document.getElementById("display_result").innerHTML=name_student_array;
+}
